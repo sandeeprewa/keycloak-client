@@ -1,0 +1,103 @@
+2022-07-17 21:13:38,441 INFO com.keycloak.client.KeycloakClientApplicationTests [main] Starting KeycloakClientApplicationTests using Java 11.0.15 on sandeeps-MacBook-Air.local with PID 17109 (started by sandeeppandey in /Users/sandeeppandey/Documents/atmax-workspace/keycloak-client)
+2022-07-17 21:13:38,443 INFO com.keycloak.client.KeycloakClientApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2022-07-17 21:13:40,719 INFO com.keycloak.client.KeycloakClientApplicationTests [main] Started KeycloakClientApplicationTests in 3.092 seconds (JVM running for 4.363)
+2022-07-17 21:13:51,162 INFO com.keycloak.client.KeycloakClientApplication [main] Starting KeycloakClientApplication using Java 16.0.2 on sandeeps-MacBook-Air.local with PID 17119 (/Users/sandeeppandey/Documents/atmax-workspace/keycloak-client/target/classes started by sandeeppandey in /Users/sandeeppandey/Documents/atmax-workspace/keycloak-client)
+2022-07-17 21:13:51,165 INFO com.keycloak.client.KeycloakClientApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-07-17 21:13:51,931 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2022-07-17 21:13:51,932 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-17 21:13:52,028 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2022-07-17 21:13:52,405 INFO com.keycloak.client.KeycloakClientApplication [main] Started KeycloakClientApplication in 1.655 seconds (JVM running for 2.342)
+2022-07-17 21:14:04,180 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-17 21:18:24,361 INFO com.keycloak.client.KeycloakClientApplication [main] Starting KeycloakClientApplication using Java 16.0.2 on sandeeps-MacBook-Air.local with PID 17260 (/Users/sandeeppandey/Documents/atmax-workspace/keycloak-client/target/classes started by sandeeppandey in /Users/sandeeppandey/Documents/atmax-workspace/keycloak-client)
+2022-07-17 21:18:24,364 INFO com.keycloak.client.KeycloakClientApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-07-17 21:18:25,171 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2022-07-17 21:18:25,171 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-17 21:18:25,281 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2022-07-17 21:18:25,654 INFO com.keycloak.client.KeycloakClientApplication [main] Started KeycloakClientApplication in 1.711 seconds (JVM running for 2.583)
+2022-07-17 21:18:47,947 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-17 21:19:28,217 INFO com.keycloak.client.KeycloakClientApplication [main] Starting KeycloakClientApplication using Java 16.0.2 on sandeeps-MacBook-Air.local with PID 17283 (/Users/sandeeppandey/Documents/atmax-workspace/keycloak-client/target/classes started by sandeeppandey in /Users/sandeeppandey/Documents/atmax-workspace/keycloak-client)
+2022-07-17 21:19:28,220 INFO com.keycloak.client.KeycloakClientApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-07-17 21:19:29,075 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2022-07-17 21:19:29,076 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-17 21:19:29,176 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2022-07-17 21:19:29,652 INFO com.keycloak.client.KeycloakClientApplication [main] Started KeycloakClientApplication in 1.875 seconds (JVM running for 2.686)
+2022-07-17 21:19:35,751 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-17 21:25:04,906 INFO com.keycloak.client.KeycloakClientApplication [main] Starting KeycloakClientApplication using Java 16.0.2 on sandeeps-MacBook-Air.local with PID 17369 (/Users/sandeeppandey/Documents/atmax-workspace/keycloak-client/target/classes started by sandeeppandey in /Users/sandeeppandey/Documents/atmax-workspace/keycloak-client)
+2022-07-17 21:25:04,910 INFO com.keycloak.client.KeycloakClientApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-07-17 21:25:05,779 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2022-07-17 21:25:05,779 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-17 21:25:05,872 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2022-07-17 21:25:06,358 INFO com.keycloak.client.KeycloakClientApplication [main] Started KeycloakClientApplication in 1.888 seconds (JVM running for 2.769)
+2022-07-17 21:28:35,386 INFO com.keycloak.client.KeycloakClientApplicationTests [main] Starting KeycloakClientApplicationTests using Java 11.0.15 on sandeeps-MacBook-Air.local with PID 17503 (started by sandeeppandey in /Users/sandeeppandey/Documents/atmax-workspace/keycloak-client)
+2022-07-17 21:28:35,387 INFO com.keycloak.client.KeycloakClientApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2022-07-17 21:28:37,711 INFO com.keycloak.client.KeycloakClientApplicationTests [main] Started KeycloakClientApplicationTests in 3.038 seconds (JVM running for 4.321)
+2022-07-17 21:28:55,234 INFO com.keycloak.client.KeycloakClientApplication [main] Starting KeycloakClientApplication using Java 11.0.15 on sandeeps-MacBook-Air.local with PID 17533 (/Users/sandeeppandey/Documents/atmax-workspace/keycloak-client/target/classes started by sandeeppandey in /Users/sandeeppandey/Documents/atmax-workspace/keycloak-client)
+2022-07-17 21:28:55,238 INFO com.keycloak.client.KeycloakClientApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-07-17 21:28:56,117 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2022-07-17 21:28:56,117 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-17 21:28:56,183 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2022-07-17 21:28:56,487 INFO com.keycloak.client.KeycloakClientApplication [main] Started KeycloakClientApplication in 1.747 seconds (JVM running for 2.075)
+2022-07-17 21:29:07,798 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-17 21:32:52,836 INFO com.keycloak.client.KeycloakClientApplication [main] Starting KeycloakClientApplication using Java 16.0.2 on sandeeps-MacBook-Air.local with PID 17616 (/Users/sandeeppandey/Documents/atmax-workspace/keycloak-client/target/classes started by sandeeppandey in /Users/sandeeppandey/Documents/atmax-workspace/keycloak-client)
+2022-07-17 21:32:52,839 INFO com.keycloak.client.KeycloakClientApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-07-17 21:32:53,741 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2022-07-17 21:32:53,741 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-17 21:32:53,828 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2022-07-17 21:32:54,314 INFO org.apache.catalina.core.StandardService [main] Stopping service [Tomcat]
+2022-07-17 21:32:54,346 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2022-07-17 21:33:11,966 INFO com.keycloak.client.KeycloakClientApplicationTests [main] Starting KeycloakClientApplicationTests using Java 11.0.15 on sandeeps-MacBook-Air.local with PID 17639 (started by sandeeppandey in /Users/sandeeppandey/Documents/atmax-workspace/keycloak-client)
+2022-07-17 21:33:11,968 INFO com.keycloak.client.KeycloakClientApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2022-07-17 21:33:14,437 INFO com.keycloak.client.KeycloakClientApplicationTests [main] Started KeycloakClientApplicationTests in 3.009 seconds (JVM running for 4.305)
+2022-07-17 21:33:18,444 INFO com.keycloak.client.KeycloakClientApplication [main] Starting KeycloakClientApplication using Java 11.0.15 on sandeeps-MacBook-Air.local with PID 17650 (/Users/sandeeppandey/Documents/atmax-workspace/keycloak-client/target/classes started by sandeeppandey in /Users/sandeeppandey/Documents/atmax-workspace/keycloak-client)
+2022-07-17 21:33:18,447 INFO com.keycloak.client.KeycloakClientApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-07-17 21:33:19,458 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2022-07-17 21:33:19,458 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-17 21:33:19,522 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2022-07-17 21:33:19,835 INFO com.keycloak.client.KeycloakClientApplication [main] Started KeycloakClientApplication in 1.89 seconds (JVM running for 2.248)
+2022-07-17 21:33:26,212 INFO org.keycloak.adapters.KeycloakDeployment [http-nio-8080-exec-1] Loaded URLs from https://keycloak-qa.atmax.co:8443/auth/realms/17-July-SAML-Atmax/.well-known/openid-configuration
+2022-07-17 21:33:28,425 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-3] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-17 21:34:18,399 INFO com.keycloak.client.KeycloakClientApplicationTests [main] Starting KeycloakClientApplicationTests using Java 11.0.15 on sandeeps-MacBook-Air.local with PID 17686 (started by sandeeppandey in /Users/sandeeppandey/Documents/atmax-workspace/keycloak-client)
+2022-07-17 21:34:18,402 INFO com.keycloak.client.KeycloakClientApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2022-07-17 21:34:20,958 INFO com.keycloak.client.KeycloakClientApplicationTests [main] Started KeycloakClientApplicationTests in 3.104 seconds (JVM running for 4.345)
+2022-07-17 21:34:25,195 INFO com.keycloak.client.KeycloakClientApplication [main] Starting KeycloakClientApplication using Java 11.0.15 on sandeeps-MacBook-Air.local with PID 17696 (/Users/sandeeppandey/Documents/atmax-workspace/keycloak-client/target/classes started by sandeeppandey in /Users/sandeeppandey/Documents/atmax-workspace/keycloak-client)
+2022-07-17 21:34:25,199 INFO com.keycloak.client.KeycloakClientApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-07-17 21:34:26,228 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2022-07-17 21:34:26,229 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-17 21:34:26,291 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2022-07-17 21:34:26,568 INFO com.keycloak.client.KeycloakClientApplication [main] Started KeycloakClientApplication in 1.863 seconds (JVM running for 2.213)
+2022-07-17 21:36:07,764 INFO org.keycloak.adapters.KeycloakDeployment [http-nio-8080-exec-1] Loaded URLs from https://keycloak-qa.atmax.co:8443/auth/realms/17-July-SAML-Atmax/.well-known/openid-configuration
+2022-07-17 21:36:08,547 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-3] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-17 21:40:12,397 INFO com.keycloak.client.KeycloakClientApplicationTests [main] Starting KeycloakClientApplicationTests using Java 11.0.15 on sandeeps-MacBook-Air.local with PID 17813 (started by sandeeppandey in /Users/sandeeppandey/Documents/atmax-workspace/keycloak-client)
+2022-07-17 21:40:12,399 INFO com.keycloak.client.KeycloakClientApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2022-07-17 21:40:14,996 INFO com.keycloak.client.KeycloakClientApplicationTests [main] Started KeycloakClientApplicationTests in 3.38 seconds (JVM running for 4.662)
+2022-07-17 21:40:19,196 INFO com.keycloak.client.KeycloakClientApplication [main] Starting KeycloakClientApplication using Java 11.0.15 on sandeeps-MacBook-Air.local with PID 17823 (/Users/sandeeppandey/Documents/atmax-workspace/keycloak-client/target/classes started by sandeeppandey in /Users/sandeeppandey/Documents/atmax-workspace/keycloak-client)
+2022-07-17 21:40:19,199 INFO com.keycloak.client.KeycloakClientApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-07-17 21:40:20,210 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2022-07-17 21:40:20,211 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-17 21:40:20,269 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2022-07-17 21:40:20,562 INFO com.keycloak.client.KeycloakClientApplication [main] Started KeycloakClientApplication in 1.856 seconds (JVM running for 2.208)
+2022-07-17 21:41:07,841 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-17 21:41:39,873 INFO com.keycloak.client.KeycloakClientApplicationTests [main] Starting KeycloakClientApplicationTests using Java 11.0.15 on sandeeps-MacBook-Air.local with PID 17868 (started by sandeeppandey in /Users/sandeeppandey/Documents/atmax-workspace/keycloak-client)
+2022-07-17 21:41:39,876 INFO com.keycloak.client.KeycloakClientApplicationTests [main] No active profile set, falling back to 1 default profile: "default"
+2022-07-17 21:41:42,439 INFO com.keycloak.client.KeycloakClientApplicationTests [main] Started KeycloakClientApplicationTests in 3.161 seconds (JVM running for 4.443)
+2022-07-17 21:41:46,511 INFO com.keycloak.client.KeycloakClientApplication [main] Starting KeycloakClientApplication using Java 11.0.15 on sandeeps-MacBook-Air.local with PID 17878 (/Users/sandeeppandey/Documents/atmax-workspace/keycloak-client/target/classes started by sandeeppandey in /Users/sandeeppandey/Documents/atmax-workspace/keycloak-client)
+2022-07-17 21:41:46,513 INFO com.keycloak.client.KeycloakClientApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-07-17 21:41:47,500 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2022-07-17 21:41:47,500 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-07-17 21:41:47,555 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2022-07-17 21:41:47,825 INFO com.keycloak.client.KeycloakClientApplication [main] Started KeycloakClientApplication in 1.838 seconds (JVM running for 2.192)
+2022-07-17 21:42:08,932 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-17 21:42:13,171 INFO org.keycloak.adapters.KeycloakDeployment [http-nio-8080-exec-2] Loaded URLs from https://keycloak-qa.atmax.co:8443/auth/realms/17-July-SAML-Atmax/.well-known/openid-configuration
