@@ -22,9 +22,11 @@ import org.springframework.security.core.session.SessionRegistryImpl;
 import org.springframework.security.web.authentication.session.RegisterSessionAuthenticationStrategy;
 import org.springframework.security.web.authentication.session.SessionAuthenticationStrategy;
 
-//@DependsOn("keycloakConfigResolver")
 @KeycloakConfiguration
-@ConditionalOnProperty(name = "keycloak.enabled", havingValue = "true", matchIfMissing = true)
+@ConditionalOnProperty(		
+name = "keycloak.enabled",
+havingValue = "true",
+matchIfMissing = true)
 public class KeycloakSecurityConfigur extends KeycloakWebSecurityConfigurerAdapter {
 
     @Autowired
@@ -41,48 +43,16 @@ public class KeycloakSecurityConfigur extends KeycloakWebSecurityConfigurerAdapt
         return new RegisterSessionAuthenticationStrategy(
           new SessionRegistryImpl());
     }
-
-
-    @SuppressWarnings({ "rawtypes", "unchecked" })
-    @Bean
-    public FilterRegistrationBean keycloakAuthenticationProcessingFilterRegistrationBean(KeycloakAuthenticationProcessingFilter filter) {
-        FilterRegistrationBean registrationBean = new FilterRegistrationBean(filter);
-        registrationBean.setEnabled(false);
-        return registrationBean;
-    }
-
-    @SuppressWarnings({ "rawtypes", "unchecked" })
-    @Bean
-    public FilterRegistrationBean keycloakPreAuthActionsFilterRegistrationBean(KeycloakPreAuthActionsFilter filter) {
-        FilterRegistrationBean<Filter> registrationBean = new FilterRegistrationBean(filter);
-        registrationBean.setEnabled(false);
-        return registrationBean;
-    }
-
-    @SuppressWarnings({ "rawtypes", "unchecked" })
-    @Bean
-    public FilterRegistrationBean keycloakAuthenticatedActionsFilterBean(KeycloakAuthenticatedActionsFilter filter) {
-        FilterRegistrationBean registrationBean = new FilterRegistrationBean(filter);
-        registrationBean.setEnabled(false);
-        return registrationBean;
-    }
-
-    @SuppressWarnings({ "rawtypes", "unchecked" })
-    @Bean
-    public FilterRegistrationBean keycloakSecurityContextRequestFilterBean(KeycloakSecurityContextRequestFilter filter) {
-        FilterRegistrationBean registrationBean = new FilterRegistrationBean(filter);
-        registrationBean.setEnabled(false);
-        return registrationBean;
-    }
+    
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         super.configure(http);
+       
         http.authorizeRequests()
           .antMatchers("/private*")
           .hasRole("default-roles-sandeep")
-          .anyRequest()
-          .permitAll();
-        
+          .anyRequest().authenticated();
+
         http.anonymous().disable();
     }
     

@@ -7,10 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import com.keycloak.client.config.AtmaxKeycloakResolver;
-import com.keycloak.client.config.KeycloakCustomConfiguration;
 
 @SpringBootApplication
-@ImportAutoConfiguration(KeycloakCustomConfiguration.class)
+//@ImportAutoConfiguration(KeycloakCustomConfiguration.class)
 public class KeycloakClientApplication {
 
 	public static void main(String[] args) {

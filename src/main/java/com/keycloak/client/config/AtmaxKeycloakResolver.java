@@ -1,5 +1,7 @@
 package com.keycloak.client.config;
 
+import java.io.InputStream;
+
 import org.keycloak.adapters.KeycloakConfigResolver;
 import org.keycloak.adapters.KeycloakDeployment;
 import org.keycloak.adapters.KeycloakDeploymentBuilder;
@@ -21,12 +23,13 @@ public class AtmaxKeycloakResolver implements KeycloakConfigResolver{
     @Override
     public KeycloakDeployment resolve(OIDCHttpFacade.Request request) {
     
-    	log.debug("***************AtmaxKeycloakResolver ****Resolve *****");
+    	System.out.println("***************AtmaxKeycloakResolver ****Resolve *****");
     	if (keycloakDeployment != null) {
             return keycloakDeployment;
         }
+    	InputStream is = getClass().getResourceAsStream("/keycloak.json");
 
-        keycloakDeployment = KeycloakDeploymentBuilder.build(adapterConfig);
+        keycloakDeployment = KeycloakDeploymentBuilder.build(is);
         return keycloakDeployment;
     }
 
