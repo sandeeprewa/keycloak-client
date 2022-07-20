@@ -36,7 +36,7 @@ public class AtmaxKeycloakResolver implements KeycloakConfigResolver{
     	System.out.println("**request.getRelativePath()request.getRelativePath()request.getRelativePath()**" + request.getRelativePath());
     	System.out.println("**request.getRelativePath()request.getRelativePath()request.getRelativePath()**" + request.getRelativePath());
     	
-    	if(request.getRelativePath().contains("private")) {
+    	if(request.getQueryParamValue("tenant") !=null && request.getQueryParamValue("tenant") .contains("private")) {
         	System.out.println("*************** PRIVIATE******* *****");
         	System.out.println("*************** PRIVIATE******* *****");
         	System.out.println("*************** PRIVIATE******* *****");
@@ -47,7 +47,7 @@ public class AtmaxKeycloakResolver implements KeycloakConfigResolver{
         	is = getClass().getResourceAsStream("/keycloak.json");
     	}
     	
-    	if(request.getRelativePath().contains("protected")) {
+    	if(request.getQueryParamValue("tenant") !=null && request.getQueryParamValue("tenant").contains("protected")) {
         	System.out.println("*************** PROTECTED ******* *****");
         	System.out.println("*************** PROTECTED ******* *****");
         	System.out.println("*************** PROTECTED ******* *****");

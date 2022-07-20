@@ -35,6 +35,7 @@ public class KeycloakSecurityConfigur extends KeycloakWebSecurityConfigurerAdapt
       AuthenticationManagerBuilder auth) throws Exception {
         KeycloakAuthenticationProvider keycloakAuthenticationProvider  = keycloakAuthenticationProvider();
         keycloakAuthenticationProvider.setGrantedAuthoritiesMapper( new SimpleAuthorityMapper());
+       
         auth.authenticationProvider(keycloakAuthenticationProvider);
     }
 
