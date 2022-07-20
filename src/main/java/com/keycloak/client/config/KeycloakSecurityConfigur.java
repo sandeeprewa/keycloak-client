@@ -20,8 +20,10 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.authority.mapping.SimpleAuthorityMapper;
 import org.springframework.security.core.session.SessionRegistryImpl;
+import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.authentication.session.RegisterSessionAuthenticationStrategy;
 import org.springframework.security.web.authentication.session.SessionAuthenticationStrategy;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @KeycloakConfiguration
 @ConditionalOnProperty(		
@@ -39,6 +41,11 @@ public class KeycloakSecurityConfigur extends KeycloakWebSecurityConfigurerAdapt
         auth.authenticationProvider(keycloakAuthenticationProvider);
     }
 
+    @Override
+    protected AuthenticationEntryPoint authenticationEntryPoint() throws Exception {
+        return new MultitenantKeycloakAuthenticationEntryPoint(adapterDeploymentContext());
+    }
+    
     @Bean
     @Override
     protected SessionAuthenticationStrategy sessionAuthenticationStrategy() {
@@ -65,5 +72,43 @@ public class KeycloakSecurityConfigur extends KeycloakWebSecurityConfigurerAdapt
     public KeycloakConfigResolver KeyCloakConfigResolver(){
         return new AtmaxKeycloakResolver();
     }
-    
+ 
+    @Override
+    protected KeycloakAuthenticationProcessingFilter keycloakAuthenticationProcessingFilter() throws Exception {
+        KeycloakAuthenticationProcessingFilter filter = new KeycloakAuthenticationProcessingFilter(authenticationManager(), new AntPathRequestMatcher("/tenant/*/sso/login"));
+        filter.setSessionAuthenticationStrategy(sessionAuthenticationStrategy());
+        return filter;
+    }
+
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+    @Bean
+    public FilterRegistrationBean keycloakAuthenticationProcessingFilterRegistrationBean(KeycloakAuthenticationProcessingFilter filter) {
+        FilterRegistrationBean registrationBean = new FilterRegistrationBean(filter);
+        registrationBean.setEnabled(false);
+        return registrationBean;
+    }
+
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+    @Bean
+    public FilterRegistrationBean keycloakPreAuthActionsFilterRegistrationBean(KeycloakPreAuthActionsFilter filter) {
+        FilterRegistrationBean registrationBean = new FilterRegistrationBean(filter);
+        registrationBean.setEnabled(false);
+        return registrationBean;
+    }
+
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+    @Bean
+    public FilterRegistrationBean keycloakAuthenticatedActionsFilterBean(KeycloakAuthenticatedActionsFilter filter) {
+        FilterRegistrationBean registrationBean = new FilterRegistrationBean(filter);
+        registrationBean.setEnabled(false);
+        return registrationBean;
+    }
+
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+    @Bean
+    public FilterRegistrationBean keycloakSecurityContextRequestFilterBean(KeycloakSecurityContextRequestFilter filter) {
+        FilterRegistrationBean registrationBean = new FilterRegistrationBean(filter);
+        registrationBean.setEnabled(false);
+        return registrationBean;
+    }
 }

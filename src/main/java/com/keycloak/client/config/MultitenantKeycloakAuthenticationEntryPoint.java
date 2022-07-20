@@ -24,7 +24,31 @@ public class MultitenantKeycloakAuthenticationEntryPoint extends KeycloakAuthent
     @Override
     protected void commenceLoginRedirect(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String path = request.getRequestURI();
-        String contextAwareLoginUri = request.getContextPath() + "/tenant/" + path+ DEFAULT_LOGIN_URI;
+        System.out.println("PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP");
+        System.out.println("PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP");
+        System.out.println("PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP");
+        System.out.println("PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP");
+        System.out.println(path);
+        System.out.println("PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP");
+        System.out.println("PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP");
+        System.out.println("PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP");
+        System.out.println("PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP");
+
+        String tenant = "default";
+        
+        if(null !=path && path.contains("private")) {
+        	tenant = "private";
+        }
+        
+        if(null !=path && path.contains("protected")) {
+        	tenant = "protected";
+        }
+        
+        System.out.println(path);
+
+        System.out.println(tenant);
+
+        String contextAwareLoginUri = request.getContextPath() + "/tenant/" + tenant + DEFAULT_LOGIN_URI;
         response.sendRedirect(contextAwareLoginUri);
     }
 }

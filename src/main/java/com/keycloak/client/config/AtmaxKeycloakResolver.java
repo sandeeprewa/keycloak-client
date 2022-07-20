@@ -22,21 +22,10 @@ public class AtmaxKeycloakResolver implements KeycloakConfigResolver{
 
     @Override
     public KeycloakDeployment resolve(OIDCHttpFacade.Request request) {
-    
-    	System.out.println("***************AtmaxKeycloakResolver ****Resolve *****");
-
-    	
-    	
+        	
     	InputStream is =  getClass().getResourceAsStream("/keycloak.json");
-    	System.out.println("**request.getRelativePath()request.getRelativePath()request.getRelativePath()**" + request.getRelativePath());
-    	System.out.println("**request.getRelativePath()request.getRelativePath()request.getRelativePath()**" + request.getRelativePath().contains("private"));
-    	System.out.println("**request.getRelativePath()request.getRelativePath()request.getRelativePath()**" + request.getRelativePath().contains("protected"));
-
-    	System.out.println("**request.getRelativePath()request.getRelativePath()request.getRelativePath()**" + request.getRelativePath());
-    	System.out.println("**request.getRelativePath()request.getRelativePath()request.getRelativePath()**" + request.getRelativePath());
-    	System.out.println("**request.getRelativePath()request.getRelativePath()request.getRelativePath()**" + request.getRelativePath());
-    	
-    	if(request.getQueryParamValue("tenant") !=null && request.getQueryParamValue("tenant") .contains("private")) {
+    	    	
+    	if(request.getRelativePath().contains("private")) {
         	System.out.println("*************** PRIVIATE******* *****");
         	System.out.println("*************** PRIVIATE******* *****");
         	System.out.println("*************** PRIVIATE******* *****");
@@ -47,7 +36,7 @@ public class AtmaxKeycloakResolver implements KeycloakConfigResolver{
         	is = getClass().getResourceAsStream("/keycloak.json");
     	}
     	
-    	if(request.getQueryParamValue("tenant") !=null && request.getQueryParamValue("tenant").contains("protected")) {
+    	if(request.getRelativePath().contains("protected")) {
         	System.out.println("*************** PROTECTED ******* *****");
         	System.out.println("*************** PROTECTED ******* *****");
         	System.out.println("*************** PROTECTED ******* *****");
