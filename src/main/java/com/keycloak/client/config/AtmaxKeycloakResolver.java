@@ -24,11 +24,39 @@ public class AtmaxKeycloakResolver implements KeycloakConfigResolver{
     public KeycloakDeployment resolve(OIDCHttpFacade.Request request) {
     
     	System.out.println("***************AtmaxKeycloakResolver ****Resolve *****");
-    	if (keycloakDeployment != null) {
-            return keycloakDeployment;
-        }
-    	InputStream is = getClass().getResourceAsStream("/keycloak.json");
 
+    	
+    	
+    	InputStream is =  getClass().getResourceAsStream("/keycloak.json");
+    	System.out.println("**request.getRelativePath()request.getRelativePath()request.getRelativePath()**" + request.getRelativePath());
+    	System.out.println("**request.getRelativePath()request.getRelativePath()request.getRelativePath()**" + request.getRelativePath().contains("private"));
+    	System.out.println("**request.getRelativePath()request.getRelativePath()request.getRelativePath()**" + request.getRelativePath().contains("protected"));
+
+    	System.out.println("**request.getRelativePath()request.getRelativePath()request.getRelativePath()**" + request.getRelativePath());
+    	System.out.println("**request.getRelativePath()request.getRelativePath()request.getRelativePath()**" + request.getRelativePath());
+    	System.out.println("**request.getRelativePath()request.getRelativePath()request.getRelativePath()**" + request.getRelativePath());
+    	
+    	if(request.getRelativePath().contains("private")) {
+        	System.out.println("*************** PRIVIATE******* *****");
+        	System.out.println("*************** PRIVIATE******* *****");
+        	System.out.println("*************** PRIVIATE******* *****");
+        	System.out.println("*************** PRIVIATE******* *****");
+        	System.out.println("*************** PRIVIATE******* *****");
+        	System.out.println("*************** PRIVIATE******* *****");
+
+        	is = getClass().getResourceAsStream("/keycloak.json");
+    	}
+    	
+    	if(request.getRelativePath().contains("protected")) {
+        	System.out.println("*************** PROTECTED ******* *****");
+        	System.out.println("*************** PROTECTED ******* *****");
+        	System.out.println("*************** PROTECTED ******* *****");
+        	System.out.println("*************** PROTECTED ******* *****");
+        	System.out.println("*************** PROTECTED ******* *****");
+
+        	is = getClass().getResourceAsStream("/keycloak1.json");
+    	}
+    	
         keycloakDeployment = KeycloakDeploymentBuilder.build(is);
         return keycloakDeployment;
     }

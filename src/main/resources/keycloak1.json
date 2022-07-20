@@ -1,0 +1,6 @@
+{
+  "realm" : "17-July-OpenId-Atmax",
+  "auth-server-url" : "https://keycloak-qa.atmax.co:8443/auth",
+  "resource" : "17-July-OpenId-Atmax-app",
+  "public-client" : true
+}

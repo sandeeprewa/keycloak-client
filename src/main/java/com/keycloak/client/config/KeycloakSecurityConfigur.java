@@ -15,6 +15,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.DependsOn;
+import org.springframework.context.annotation.Scope;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.authority.mapping.SimpleAuthorityMapper;
@@ -51,12 +52,15 @@ public class KeycloakSecurityConfigur extends KeycloakWebSecurityConfigurerAdapt
         http.authorizeRequests()
           .antMatchers("/private*")
           .hasRole("default-roles-sandeep")
+          .antMatchers("/protected*")
+          .hasRole("default-roles-17-July-OpenId-Atmax")
           .anyRequest().authenticated();
 
         http.anonymous().disable();
     }
     
     @Bean
+//    @Scope("prototype")
     public KeycloakConfigResolver KeyCloakConfigResolver(){
         return new AtmaxKeycloakResolver();
     }
