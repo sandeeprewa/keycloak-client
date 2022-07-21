@@ -48,12 +48,11 @@ public class KeycloakSecurityConfigur extends KeycloakWebSecurityConfigurerAdapt
     protected void configure(HttpSecurity http) throws Exception {
         super.configure(http);
        
-        http.authorizeRequests()
-          .antMatchers("/private*")
-          .hasRole("default-roles-sandeep")
-          .antMatchers("/protected*")
-          .hasRole("default-roles-17-July-OpenId-Atmax")
-          .anyRequest().authenticated();
+          http.authorizeRequests()
+	          .antMatchers("/api/v1/sso*")
+	          .hasAnyRole("uma_authorization")
+	          .anyRequest()
+	          .authenticated();
 
         http.anonymous().disable();
     }
