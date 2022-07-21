@@ -38,6 +38,7 @@ public class KeyCloakSSOEntrypoint {
 	private AccessToken loggedInAccessToken() {
 		KeycloakAuthenticationToken token = (KeycloakAuthenticationToken) SecurityContextHolder.getContext()
 				.getAuthentication();
+		@SuppressWarnings("rawtypes")
 		KeycloakPrincipal keycloakPrincipal = (KeycloakPrincipal) token.getPrincipal();
 		KeycloakSecurityContext session = keycloakPrincipal.getKeycloakSecurityContext();
 		return session.getToken();

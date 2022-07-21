@@ -65,7 +65,8 @@ public class KeycloakSecurityConfigur extends KeycloakWebSecurityConfigurerAdapt
     @Override
     @Bean
     protected KeycloakAuthenticationProcessingFilter keycloakAuthenticationProcessingFilter() throws Exception {
-        KeycloakAuthenticationProcessingFilter filter = new KeycloakAuthenticationProcessingFilter(authenticationManager(), new AntPathRequestMatcher("/tenant/sso/login"));
+        @SuppressWarnings("deprecation")
+		KeycloakAuthenticationProcessingFilter filter = new KeycloakAuthenticationProcessingFilter(authenticationManager(), new AntPathRequestMatcher("/tenant/sso/login"));
         filter.setSessionAuthenticationStrategy(sessionAuthenticationStrategy());
         return filter;
     }
