@@ -6,9 +6,11 @@ import org.keycloak.adapters.KeycloakConfigResolver;
 import org.keycloak.adapters.KeycloakDeployment;
 import org.keycloak.adapters.KeycloakDeploymentBuilder;
 import org.keycloak.adapters.OIDCHttpFacade;
-import org.keycloak.representations.adapters.config.AdapterConfig;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import com.keycloak.client.common.ConfigConstant;
+import com.keycloak.client.common.Validator;
+
 import lombok.extern.slf4j.Slf4j;
 
 @Component
@@ -17,37 +19,24 @@ public class AtmaxKeycloakResolver implements KeycloakConfigResolver{
 
     private KeycloakDeployment keycloakDeployment;
 
-  //  @Autowired(required=false)
-    private AdapterConfig adapterConfig =null;
-
     @Override
     public KeycloakDeployment resolve(OIDCHttpFacade.Request request) {
-        	
-    	InputStream is =  getClass().getResourceAsStream("/keycloak.json");
-    	    	
-    	if(request.getRelativePath().contains("private")) {
-        	System.out.println("*************** PRIVIATE******* *****");
-        	System.out.println("*************** PRIVIATE******* *****");
-        	System.out.println("*************** PRIVIATE******* *****");
-        	System.out.println("*************** PRIVIATE******* *****");
-        	System.out.println("*************** PRIVIATE******* *****");
-        	System.out.println("*************** PRIVIATE******* *****");
+    	String tenantName = tenantOrDefault(request);
+    	String keycloakFile = tenantName + "-keycloak.json";
+    	log.debug("Inside resolve tenant {} keycloakFile {}",tenantName,keycloakFile);
 
-        	is = getClass().getResourceAsStream("/keycloak.json");
-    	}
-    	
-    	if(request.getRelativePath().contains("protected")) {
-        	System.out.println("*************** PROTECTED ******* *****");
-        	System.out.println("*************** PROTECTED ******* *****");
-        	System.out.println("*************** PROTECTED ******* *****");
-        	System.out.println("*************** PROTECTED ******* *****");
-        	System.out.println("*************** PROTECTED ******* *****");
-
-        	is = getClass().getResourceAsStream("/keycloak1.json");
-    	}
-    	
+    	InputStream is =  getClass().getResourceAsStream("/"+keycloakFile);
         keycloakDeployment = KeycloakDeploymentBuilder.build(is);
         return keycloakDeployment;
     }
+
+	private String tenantOrDefault(OIDCHttpFacade.Request requeset) {
+		String tenant = requeset.getQueryParamValue(ConfigConstant.TENANT_QUERY_PARAM);
+		
+		if(Validator.isEmpty(tenant)) {
+			tenant = ConfigConstant.DEFAULT_TENANT;
+		}
+		return tenant;
+	}
 
 }
