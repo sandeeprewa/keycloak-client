@@ -1,0 +1,6 @@
+{
+  "realm" : "qa21",
+  "auth-server-url" : "https://keycloak-qa.atmax.co:8443/auth",
+  "resource" : "qg21-app",
+  "public-client" : true
+}
