@@ -1,0 +1,6 @@
+{
+  "realm" : "googleSaml",
+  "auth-server-url" : "https://keycloak-qa.atmax.co:8443/auth",
+  "resource" : "googleSaml-app",
+  "public-client" : true
+}
