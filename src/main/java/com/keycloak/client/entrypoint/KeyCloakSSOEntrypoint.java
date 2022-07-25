@@ -30,8 +30,13 @@ public class KeyCloakSSOEntrypoint {
 	@GetMapping(path = { "/api/v1/sso","api/auth/sso/integeration"})
 	public void ssoLogin(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		log.debug("Inside ssoLogin {}", request.getRequestURL());
+		
 		AccessToken accessToken = keycloakUtil.loggedInAccessToken();
+		
+		
 		User user = User.buildUser(accessToken);
+		
+		
 		log.debug("Retrived user is {}", user);
 		String redirectUrl = apiAtmaxProxyService.loginAndGetRedirectUrl(user);
 		log.debug("redirectURL is {}", redirectUrl);

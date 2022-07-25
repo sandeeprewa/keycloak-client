@@ -58,7 +58,9 @@ public class MultitenantKeycloakAuthenticationEntryPoint extends KeycloakAuthent
 		if(!Validator.isEmpty(contextPath)) {
 			 String splitedDomain[] = contextPath.split("\\.");
 			 if(Objects.nonNull(splitedDomain) && splitedDomain.length !=0) {
-				 return splitedDomain[0];
+				 String[] splitedSubDomain = splitedDomain[0].split("-");
+				 return splitedSubDomain[0];
+
 			 }
 		}
 		return ConfigConstant.EMPTY;
