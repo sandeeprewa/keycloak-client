@@ -31,17 +31,12 @@ public class User {
 	private String orgName;
 	private String atmaxProductUriToRedirect;
 
-	public static User buildUser(AccessToken accessToken) {
+	public static User buildUser(AccessToken accessToken, String tenant) {
 		return User.builder()
-				.userName(accessToken.getPreferredUsername())
 				.email(accessToken.getEmail())
-				.fName(accessToken.getGivenName())
-				.lName(accessToken.getMiddleName())
-				.employeeCode(accessToken.getId())
-				.roles(accessToken.getRealmAccess().getRoles())
-				.tenantId(accessToken.getRealmAccess().toString())
-				.claims(accessToken.getOtherClaims())
+				.tenantId(tenant)
 				.atmaxProductUriToRedirect(INCENTMAX)
+				.orgName(tenant)
 				.build();
 	}
 

@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.keycloak.client.common.Validator;
 import com.keycloak.client.domain.User;
 import com.keycloak.client.entrypoint.util.KeycloakUtil;
+import com.keycloak.client.entrypoint.util.RequestInputExtractor;
 import com.keycloak.client.service.ApiAtmaxProxyService;
 import lombok.extern.slf4j.Slf4j;
 import java.io.IOException;
@@ -31,10 +32,12 @@ public class KeyCloakSSOEntrypoint {
 	public void ssoLogin(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		log.debug("Inside ssoLogin {}", request.getRequestURL());
 		
+    	String tenant = RequestInputExtractor.resolveTenantByQueryParamOrByContextOrDefault(request);
+
 		AccessToken accessToken = keycloakUtil.loggedInAccessToken();
 		
 		
-		User user = User.buildUser(accessToken);
+		User user = User.buildUser(accessToken,tenant);
 		
 		
 		log.debug("Retrived user is {}", user);
